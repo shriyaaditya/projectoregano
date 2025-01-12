@@ -2,12 +2,8 @@ import styled from 'styled-components';
 import tw from 'twin.macro';
 
 export const NotFoundContainer = styled.div`
-  ${tw`grid min-h-[90vh] place-items-center`}
-  background: 
-    /* linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.45) 100%),  */
-    url('https://res.cloudinary.com/dqqyuvg1v/image/upload/v1736692603/Background_v64hmu.png'); /* Replace with your image URL */
-  background-size: cover;
-  background-position: center;
+  ${tw`grid place-items-center min-h-[90vh]`}
+  background: var(--Background, linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.45) 100%), #200818);
 `;
 
 export const NotFoundTitle = styled.h1`
@@ -22,7 +18,7 @@ export const NotFoundTitle = styled.h1`
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  ${tw`font-prompt`};
+  ${tw`font-prompt pb-8`};
 `;
 
 export const NotFoundText = styled.p`
@@ -33,7 +29,7 @@ export const NotFoundText = styled.p`
   font-weight: 300;
   line-height: 140%;
   letter-spacing: 0.0375rem;
-  ${tw`max-w-2xl font-satoshi`};
+  ${tw` font-satoshi max-w-2xl pt-6`};
 `;
 
 export const NotFoundSubTitle = styled.h2`
@@ -44,11 +40,15 @@ export const NotFoundSubTitle = styled.h2`
   font-weight: 500;
   line-height: 100%;
 
-  ${tw`-mt-5 font-proza`}
+  ${tw`font-proza -mt-5 `}
 `;
 
 export const NotFoundInnerContainer = styled.div`
-  ${tw`flex flex-col items-center justify-center gap-5`}
+  ${tw`flex flex-col items-center justify-center pb-4`}
+`;
+
+export const ButtonContainer = styled.div`
+  ${tw`flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 pt-4`}
 `;
 
 export const GoBack = styled.button``;
